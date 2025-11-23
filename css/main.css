@@ -35,3 +35,20 @@ a {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-icon {
+    width: 6rem;
+    height: auto;
+}
