@@ -1,0 +1,35 @@
+/* Definice Design Systému */
+:root {
+    /* --- Colors --- */
+
+    /* Primary */
+    --color-primary: #283e67;
+    --color-primary-hover: #5373b5;
+    --color-primary-active: #1f2e5a;
+
+    /* Accent */
+    --color-accent: #c33734;
+    --color-accent-hover: #e26966;
+    --color-accent-active: #a32b29;
+
+    /* Neutrals */
+    --color-text-main: #1a202c;
+    --color-text-subtle: #718096;
+    --color-border: #e2e8f0;
+    --color-bg-container: #ffffff;
+    --color-bg-page: #f1f5f9;
+
+    /* System */
+    --color-success: #48bb78;
+    --color-error: #f56565;
+
+    /* --- TYPOGRAFIE --- */
+    --font-heading: "Poppins", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    /* --- SPACING & LAYOUT --- */
+    --radius-card: 8px;
+    --shadow-card: 0 2px 8px rgba(26, 32, 44, 0.05);
+
+    --container-width-desktop: 1200px; /* Maximální šířka obsahu */
+}
