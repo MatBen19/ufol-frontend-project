@@ -101,6 +101,29 @@ header {
     box-shadow: none;
 }
 
+/* SECTION HEADERS */
+
+.section__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.section__header a {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-primary);
+    transition: all 0.3s ease-out;
+}
+
+.section__header a:hover {
+    color: var(--color-primary-hover);
+}
+
+.section__header a:active {
+    color: var(--color-primary-active);
+}
+
 /* UPCOMING MATCHES */
 
 .upcoming-matches__content {
@@ -112,27 +135,6 @@ header {
     width: 100%;
     max-width: var(--container-width-desktop);
     margin: 0 auto;
-}
-
-.upcoming-matches__header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-}
-
-.upcoming-matches__header a{
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--color-primary);
-    transition: all 0.3s ease-out;
-}
-
-.upcoming-matches__header a:hover {
-    color: var(--color-primary-hover);
-}
-
-.upcoming-matches__header a:active {
-    color: var(--color-primary-active);
 }
 
 .upcoming-matches__list {
@@ -187,4 +189,66 @@ header {
     font-size: 1.5rem;
     font-weight: 600;
     font-family: var(--font-heading);
+}
+
+/* STANDINGS */
+
+.standings__content {
+    padding: 4rem 2rem 0 2rem;
+    width: 100%;
+    max-width: var(--container-width-desktop);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.standings__table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: var(--color-bg-container);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+}
+
+.standings__table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+.standings__table th,
+.standings__table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.table__header th {
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--color-text-subtle);
+    background-color: #f8fafc;
+}
+
+.table__team {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: auto;
+    text-align: left;
+}
+
+.table__team img {
+    width: 1.5rem;
+    height: auto;
+}
+
+.table__team span {
+    font-weight: 600;
+}
+
+.table__row.zebra {
+    background-color: var(--color-bg-page);
 }
