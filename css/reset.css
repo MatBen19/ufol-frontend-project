@@ -2,7 +2,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box; /* Klíčové pro responzivitu - padding nezvětšuje šířku elementu */
+    box-sizing: border-box; /* Klíčové pro responzivitu - padding nezvětšuje velikost elementu */
     margin: 0;
     padding: 0;
 }

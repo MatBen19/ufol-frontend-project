@@ -252,6 +252,8 @@ header {
     background-color: var(--color-bg-page);
 }
 
+/* FOOTER */
+
 .footer {
     background-color: var(--color-primary);
     color: #e2e8f0;
@@ -309,4 +311,32 @@ header {
 
 .footer__link:active {
     color: var(--color-accent);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+    :root {
+        --container-width-desktop: 100%;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .nav-list {
+        gap: 1rem;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    /* Copyright na konec */
+    .footer__column:first-child {
+        order: 1;
+    }
 }
