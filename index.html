@@ -12,25 +12,30 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="css/main.css" />
+        <!-- Javascript pro responizivní navigaci -->
+        <script src="./script.js" defer></script>
     </head>
 
     <body>
-        <header>
-            <a href="index.html">
-                <img
-                    class="nav-icon"
-                    src="./images/logos/ufol.svg"
-                    alt="league icon"
-                />
-            </a>
-            <nav class="nav-main">
-                <ul class="nav-list">
-                    <li><a href="./index.html">Domů</a></li>
-                    <li><a href="./tabulka.html">Tabulka</a></li>
-                    <li><a href="./zapasy.html">Zápasy</a></li>
-                    <li><a href="./tymy.html">Týmy</a></li>
-                </ul>
-            </nav>
+        <header class="header">
+            <div class="header__content">
+                <a href="index.html">
+                    <img class="header__logo" src="./images/logos/ufol.svg" alt="league icon"/>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__menu">
+                        <li><a href="./index.html">Domů</a></li>
+                        <li><a href="./tabulka.html">Tabulka</a></li>
+                        <li><a href="./zapasy.html">Zápasy</a></li>
+                        <li><a href="./tymy.html">Týmy</a></li>
+                    </ul>
+                    <button class="nav__hamburger" aria-label="Otevřít menu">
+                        <span class="nav__bar"></span>
+                        <span class="nav__bar"></span>
+                        <span class="nav__bar"></span>
+                    </button>
+                </nav>
+            </div>
         </header>
 
         <main>

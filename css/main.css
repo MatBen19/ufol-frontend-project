@@ -26,24 +26,31 @@ a {
 
 /* HEADER */
 
-header {
+.header {
     padding: 0.5rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--color-bg-container);
     border-bottom: 4px solid var(--color-accent);
 }
 
-.nav-list {
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    width: 6rem;
+    height: auto;
+}
+
+.nav__hamburger {
+    display: none;
+}
+
+.nav__menu {
     list-style: none;
     display: flex;
     gap: 2rem;
-}
-
-.nav-icon {
-    width: 6rem;
-    height: auto;
 }
 
 /* HERO SECTION */
@@ -326,10 +333,122 @@ header {
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .nav-list {
-        gap: 1rem;
+    /* NAVIGACE */
+    /* Menu pozicováno fixně mimo obrazovku na pravé straně, defaultně není vidět,
+        objeví se přes celou obrazovku při kliknutí na button */
+    .nav__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items: center;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 100%;
+
+        background-color: var(--color-primary);
+        opacity: 0;
+        transition: right 0.3s ease, opacity 0.3s ease;
+        z-index: 90;
     }
 
+    /* Změna pozicování při rozkliknutí menu */
+    .nav__menu--open {
+        right: 0;
+        opacity: 1;
+    }
+
+    .nav__menu a {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .nav__hamburger {
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.6rem;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        z-index: 100;
+        position: relative;
+    }
+
+    /* Změna hamburger ikonky na křížek s animací */
+    .nav__cross .nav__bar:nth-child(1) {
+        transform: translateY(1rem) rotate(45deg);
+    }
+
+    .nav__cross .nav__bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav__cross .nav__bar:nth-child(3) {
+        transform: translateY(-1rem) rotate(-45deg);
+    }
+
+    .nav__cross .nav__bar:nth-child(1),
+    .nav__cross .nav__bar:nth-child(3) {
+        background-color: white;
+    }
+
+    .nav__bar {
+        width: 100%;
+        height: 0.4rem;
+        background-color: var(--color-primary);
+        border-radius: 2rem;
+        transition: all 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 250px;
+    }
+
+    .hero__content {
+        gap: 1.5rem;
+    }
+    .hero__content h1 {
+        font-size: 2rem;
+    }
+
+    .hero__subtitle {
+        display: none;
+    }
+
+    /* SECTION TOP PADDINGS */
+    .upcoming-matches__content,
+    .standings__content {
+        padding-top: 2rem;
+    }
+    /* MATCH CARD */
+    .match-card__team {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    .match-card__logo {
+        height: 2rem;
+    }
+
+    .match-card__team:last-child {
+        flex-direction: column-reverse;
+    }
+
+    .match-card__name {
+        font-size: 1rem;
+    }
+
+    .match-card__info {
+        font-size: 0.7rem;
+    }
+
+    /* FOOTER */
     .footer__content {
         flex-direction: column;
         gap: 3rem;
