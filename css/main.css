@@ -290,7 +290,6 @@ a {
 .footer__logo {
     height: 5rem;
     width: auto;
-    margin-bottom: 0.5rem;
 }
 
 .footer__heading {
@@ -450,12 +449,28 @@ a {
 
     /* FOOTER */
     .footer__content {
+        padding: 2rem 1.5rem;
         flex-direction: column;
-        gap: 3rem;
+        width: 100%;
+        gap: 1.2rem;
+    }
+
+    .footer__column {
+        gap: 0.2rem;
+    }
+
+    .footer__heading {
+        margin-bottom: 0.2rem;
     }
 
     /* Copyright na konec */
-    .footer__column:first-child {
+    .footer__column--brand {
         order: 1;
+        gap: 0;
+    }
+
+    .footer__logo {
+        height: 2rem;
+        width: auto;
     }
 }

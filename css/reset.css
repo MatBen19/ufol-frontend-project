@@ -26,3 +26,8 @@ textarea,
 select {
     font: inherit; /* Formulářové prvky dědí font */
 }
+
+/* Odstranění modrého prokliku u odkazů */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
