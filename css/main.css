@@ -309,7 +309,7 @@ a {
     border: 1px solid var(--color-border);
 }
 
-.league-table {
+.league-table-mini {
     width: 100%;
     min-width: 400px;
     border-collapse: collapse;
@@ -358,6 +358,11 @@ a {
     text-align: center;
 }
 
+.league-table {
+    width: 100%;
+    min-width: 768px;
+    border-collapse: collapse;
+}
 
 /* =========================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
