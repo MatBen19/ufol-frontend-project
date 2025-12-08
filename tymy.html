@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Týmy | UFoL</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <!-- Javascript pro responizivní navigaci -->
+        <script src="./script.js" defer></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__content">
+                <a href="index.html">
+                    <img class="header__logo" src="./images/logos/ufol.svg" alt="league icon"/>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__menu">
+                        <li><a class="nav__link" href="./index.html">Domů</a></li>
+                        <li><a class="nav__link" href="./tabulka.html">Tabulka</a></li>
+                        <li><a class="nav__link" href="./zapasy.html">Zápasy</a></li>
+                        <li><a class="nav__link nav__link--active" href="./tymy.html">Týmy</a></li>
+                    </ul>
+                    <button class="nav__hamburger" aria-label="Otevřít menu">
+                        <span class="nav__bar"></span>
+                        <span class="nav__bar"></span>
+                        <span class="nav__bar"></span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="teams">
+                <div class="teams__content">
+                    <div class="teams__header">
+                        <h1>Týmy</h1>
+                    </div>
+
+                    <div class="teams__grid">
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/cvut.jpg" alt="ČVUT Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">ČVUT</h3>
+                                <p class="team-card__name">České vysoké učení technické v Praze</p>
+                                <div class="team-card__stats">
+                                    <span>8. místo</span>
+                                    <span>•</span>
+                                    <span>9 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu ČVUT"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/czu.png" alt="ČZU Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">ČZU</h3>
+                                <p class="team-card__name">Česká zemědělská univerzita v Praze</p>
+                                <div class="team-card__stats">
+                                    <span>16. místo</span>
+                                    <span>•</span>
+                                    <span>2 body</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu ČZU"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/ju.png" alt="JU Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">JU</h3>
+                                <p class="team-card__name">Jihočeská univerzita v Českých Budějovicích</p>
+                                <div class="team-card__stats">
+                                    <span>15. místo</span>
+                                    <span>•</span>
+                                    <span>4 body</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu JU"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/muni.png" alt="MUNI Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">MUNI</h3>
+                                <p class="team-card__name">Masarykova univerzita</p>
+                                <div class="team-card__stats">
+                                    <span>10. místo</span>
+                                    <span>•</span>
+                                    <span>7 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu MUNI"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/osu.png" alt="OSU Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">OSU</h3>
+                                <p class="team-card__name">Ostravská univerzita</p>
+                                <div class="team-card__stats">
+                                    <span>13. místo</span>
+                                    <span>•</span>
+                                    <span>5 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu OSU"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/tul.png" alt="TUL Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">TUL</h3>
+                                <p class="team-card__name">Technická univerzita v Liberci</p>
+                                <div class="team-card__stats">
+                                    <span>6. místo</span>
+                                    <span>•</span>
+                                    <span>11 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu TUL"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/uhk.png" alt="UHK Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">UHK</h3>
+                                <p class="team-card__name">Univerzita Hradec Králové</p>
+                                <div class="team-card__stats">
+                                    <span>2. místo</span>
+                                    <span>•</span>
+                                    <span>16 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu UHK"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/ujep.png" alt="UJEP Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">UJEP</h3>
+                                <p class="team-card__name">Univerzita J. E. Purkyně v Ústí nad Labem</p>
+                                <div class="team-card__stats">
+                                    <span>7. místo</span>
+                                    <span>•</span>
+                                    <span>10 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu UJEP"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/uk.png" alt="UK Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">UK</h3>
+                                <p class="team-card__name">Univerzita Karlova</p>
+                                <div class="team-card__stats">
+                                    <span>9. místo</span>
+                                    <span>•</span>
+                                    <span>8 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu UK"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/upce.png" alt="UPCE Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">UPCE</h3>
+                                <p class="team-card__name">Univerzita Pardubice</p>
+                                <div class="team-card__stats">
+                                    <span>3. místo</span>
+                                    <span>•</span>
+                                    <span>15 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu UPCE"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/upol.png" alt="UPOL Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">UPOL</h3>
+                                <p class="team-card__name">Univerzita Palackého v Olomouci</p>
+                                <div class="team-card__stats">
+                                    <span>11. místo</span>
+                                    <span>•</span>
+                                    <span>7 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu UPOL"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/utb.png" alt="UTB Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">UTB</h3>
+                                <p class="team-card__name">Univerzita Tomáše Bati ve Zlíně</p>
+                                <div class="team-card__stats">
+                                    <span>12. místo</span>
+                                    <span>•</span>
+                                    <span>6 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu UTB"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/vsb.png" alt="VŠB Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">VŠB-TUO</h3>
+                                <p class="team-card__name">VŠB – Technická univerzita Ostrava</p>
+                                <div class="team-card__stats">
+                                    <span>14. místo</span>
+                                    <span>•</span>
+                                    <span>4 body</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu VŠB"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/vse.png" alt="VŠE Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">VŠE</h3>
+                                <p class="team-card__name">Vysoká škola ekonomická v Praze</p>
+                                <div class="team-card__stats">
+                                    <span>5. místo</span>
+                                    <span>•</span>
+                                    <span>12 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu VŠE"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/vste.jpg" alt="VŠTE Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">VŠTE</h3>
+                                <p class="team-card__name">VŠTE v Českých Budějovicích</p>
+                                <div class="team-card__stats">
+                                    <span>1. místo</span>
+                                    <span>•</span>
+                                    <span>19 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu VŠTE"></a>
+                        </div>
+                        
+                        <div class="team-card">
+                            <div class="team-card__header">
+                                <div class="team-card__logo-wrapper">
+                                    <img class="team-card__logo" src="./images/logos/zcu.png" alt="ZČU Logo">
+                                </div>
+                            </div>
+                            <div class="team-card__body">
+                                <h3 class="team-card__acronym">ZČU</h3>
+                                <p class="team-card__name">Západočeská univerzita v Plzni</p>
+                                <div class="team-card__stats">
+                                    <span>4. místo</span>
+                                    <span>•</span>
+                                    <span>13 bodů</span>
+                                </div>
+                            </div>
+                            <div class="team-card__footer">
+                                <span class="team-card__link">Detail týmu &rarr;</span>
+                            </div>
+                            <a href="#" class="team-card__overlay-link" aria-label="Detail týmu ZČU"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__column footer__column--brand">
+                    <a href="index.html" class="footer__logo-link">
+                        <img class="footer__logo" src="./images/logos/ufol.svg" alt="UFoL Logo">
+                    </a>
+                    <p class="footer__text">© 2025 Univerzitní fotbalová liga</p>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__heading">Navigace</h3>
+                    <ul class="footer__list">
+                        <li><a href="index.html" class="footer__link">Domů</a></li>
+                        <li><a href="tabulka.html" class="footer__link">Tabulka</a></li>
+                        <li><a href="zapasy.html" class="footer__link">Zápasy</a></li>
+                        <li><a href="tymy.html" class="footer__link">Týmy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__heading">Sledujte nás</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Instagram</a></li>
+                        <li><a href="#" class="footer__link">Facebook</a></li>
+                        <li><a href="#" class="footer__link">ČAUS web</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

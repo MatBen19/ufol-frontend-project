@@ -293,12 +293,18 @@ a {
 /* STANDINGS */
 
 .standings__content {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     max-width: var(--container-width-desktop);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+.league-table--mini {
+    width: 100%;
+    min-width: 300px;
+    border-collapse: collapse;
 }
 
 /* Sdílené styly pro tabulku */
@@ -309,12 +315,6 @@ a {
     background: var(--color-bg-container);
     border-radius: var(--radius-card);
     border: 1px solid var(--color-border);
-}
-
-.league-table-mini {
-    width: 100%;
-    min-width: 300px;
-    border-collapse: collapse;
 }
 
 .standings__hint {
@@ -377,8 +377,138 @@ a {
 
 .league-table {
     width: 100%;
-    min-width: 768px;
+    min-width: 700px;
     border-collapse: collapse;
+}
+
+/* =========================================
+   TÝMY
+   ========================================= */
+.teams__content {
+    padding: 2rem 2rem;
+    width: 100%;
+    max-width: var(--container-width-desktop);
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.teams__header {
+    text-align: center;
+}
+
+.teams__grid {
+    /* Grid Layout */
+    display: grid;
+    /* 3 sloupce */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem;
+}
+
+/* Karta Týmu */
+.team-card {
+    position: relative; 
+    
+    background-color: var(--color-bg-container);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    /* Animace při najetí myší */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover efekt na celou kartu */
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--color-primary-hover);
+}
+
+/* Overlay Link */
+.team-card__overlay-link {
+    /* Roztáhne odkaz přes celou kartu */
+    position: absolute;
+    inset: 0; /* top:0, right:0, bottom:0, left:0 */
+    z-index: 1; /* Musí být nad obsahem */
+    cursor: pointer;
+}
+
+/* --- Části Karty --- */
+
+/* Horní část s logem */
+.team-card__header {
+    background-color: #F8FAFC;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.team-card__logo {
+    width: 5rem; /* Velké logo */
+    height: 5rem;
+    object-fit: contain;
+    /* Jemný stín pod logem pro hloubku */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+/* Tělo s textem */
+.team-card__body {
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1; /* Roztáhne se, aby patička byla vždy dole */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.team-card__acronym {
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+}
+
+.team-card__name {
+    color: var(--color-text-subtle);
+    font-size: 0.9rem;
+}
+
+.team-card__stats {
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Footer s vizuálním odkazem */
+.team-card__footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    background-color: white;
+}
+
+.team-card__link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    
+    transition: color 0.3s ease;
+}
+
+/* Změní se barva odkazu dole */
+.team-card:hover .team-card__link {
+    color: var(--color-accent);
 }
 
 /* =========================================
@@ -390,11 +520,19 @@ a {
     :root {
         --container-width-desktop: 100%;
     }
+
+    .teams__grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
     /* NAVIGACE */
+    /* Zámek scrollování pro otevřené menu */
+    body.no-scroll {
+        overflow: hidden;
+    }
     /* Menu pozicováno fixně mimo obrazovku na pravé straně, defaultně není vidět,
         objeví se přes celou obrazovku při kliknutí na button */
     .nav__menu {
@@ -406,7 +544,7 @@ a {
         position: fixed;
         top: 0;
         right: -100%;
-        height: 100%;
+        height: 100vh;
         width: 100%;
 
         background-color: var(--color-primary);
@@ -517,6 +655,11 @@ a {
     /* Zobrazení nápovědi pro práci s tabulkou */
     .standings__hint {
         display: block;
+    }
+
+    /* Pouze 1 sloupec u gridu v TÝMY layoutu */
+    .teams__grid {
+        grid-template-columns: repeat(1, 1fr); 
     }
 
     /* FOOTER */
