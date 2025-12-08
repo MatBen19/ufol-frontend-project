@@ -301,6 +301,8 @@ a {
     gap: 1.5rem;
 }
 
+/* Sdílené styly pro tabulku */
+
 .standings__table-content {
     width: 100%;
     overflow-x: auto;
@@ -311,8 +313,15 @@ a {
 
 .league-table-mini {
     width: 100%;
-    min-width: 400px;
+    min-width: 300px;
     border-collapse: collapse;
+}
+
+.standings__hint {
+    display: none;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-text-subtle);
 }
 
 .league-table__th,
@@ -323,19 +332,27 @@ a {
 }
 
 .league-table__header-row {
-    text-align: center;
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: var(--color-text-subtle);
     background-color: #f8fafc;
+}
+
+.league-table__th--pos,
+.league-table__cell--pos {
+    width: 3rem;
+    color: var(--color-text-subtle);
+}
+
+.league-table__th--team,
+.league-table__cell--team {
+    text-align: left;
 }
 
 .league-table__team-content {
     display: flex;
     align-items: center;
     gap: 1rem;
-    width: auto;
-    text-align: left;
 }
 
 .league-table__logo {
@@ -474,6 +491,7 @@ a {
     .standings__content {
         padding-top: 2rem;
     }
+
     /* MATCH CARD */
     .match-card__team {
         flex-direction: column;
@@ -494,6 +512,11 @@ a {
 
     .match-card__info {
         font-size: 0.7rem;
+    }
+
+    /* Zobrazení nápovědi pro práci s tabulkou */
+    .standings__hint {
+        display: block;
     }
 
     /* FOOTER */
