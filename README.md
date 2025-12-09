@@ -6,13 +6,11 @@ Toto je semestrální práce pro předmět World Wide Web na Univerzitě Pardubi
 
 ---
 
-<!-- ## 🚀 Live Demo
+## 🚀 Live Demo
 
-**[Odkaz na živou demoverzi zde](https://vašejméno.github.io/ufol-frontend-project)**
+**[Odkaz na živou demoverzi zde](https://matben19.github.io/ufol-frontend-project/index.html)**
 
-TODO: Pridat link na demoverzi
-
----  -->
+---
 
 ## 🎯 Cíle projektu a zadání
 
@@ -20,7 +18,7 @@ Toto je statická webová prezentace navržená tak, aby splnila následující 
 * **4 unikátní layouty:** Homepage, Tabulka, Zápasy, Týmy.
 * **Vysoký grafický standard:** Design vytvořený ve Figmě.
 * **Sémantické HTML5:** Čistá a logická struktura dokumentu.
-* **Responzivní design:** Mobile-first přístup s min. 3 breakpointy.
+* **Responzivní design:** Responzivní chování na různých zařízeních se 3 breakpointy.
 * **Žádné CSS frameworky:** Všechny styly jsou psány ve vlastním, moderním CSS (Flexbox, Grid, CSS proměnné).
 * **Validní kód:** Kód validovaný pomocí W3C validátoru.
 
