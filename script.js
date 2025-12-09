@@ -21,10 +21,6 @@
      * @param {Event} event - Click event
      */
     function toggleMenu(event) {
-        if (event && event.preventDefault) {
-            event.preventDefault();
-        }
-        
         const isOpen = menu.classList.contains("nav__menu--open");
         
         // Toggle menu visibility
