@@ -21,7 +21,9 @@
      * @param {Event} event - Click event
      */
     function toggleMenu(event) {
-        event.preventDefault();
+        if (event && event.preventDefault) {
+            event.preventDefault();
+        }
         
         const isOpen = menu.classList.contains("nav__menu--open");
         
@@ -31,8 +33,21 @@
         body.classList.toggle("no-scroll");
         
         // Update ARIA attribute for accessibility
-        hamburger.setAttribute('aria-expanded', !isOpen);
+        hamburger.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
         hamburger.setAttribute('aria-label', isOpen ? 'Otevřít menu' : 'Zavřít menu');
+    }
+    
+    /**
+     * Closes the mobile menu
+     */
+    function closeMenu() {
+        if (menu.classList.contains("nav__menu--open")) {
+            menu.classList.remove("nav__menu--open");
+            hamburger.classList.remove("nav__cross");
+            body.classList.remove("no-scroll");
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-label', 'Otevřít menu');
+        }
     }
     
     /**
@@ -40,8 +55,8 @@
      * @param {KeyboardEvent} event - Keyboard event
      */
     function handleEscapeKey(event) {
-        if (event.key === 'Escape' && menu.classList.contains("nav__menu--open")) {
-            toggleMenu(event);
+        if (event.key === 'Escape') {
+            closeMenu();
         }
     }
     
@@ -55,10 +70,6 @@
     // Close menu when clicking on a menu link (better mobile UX)
     const menuLinks = menu.querySelectorAll('.nav__link');
     menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (menu.classList.contains("nav__menu--open")) {
-                toggleMenu(new Event('click'));
-            }
-        });
+        link.addEventListener('click', closeMenu);
     });
 })();
