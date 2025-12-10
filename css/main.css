@@ -351,8 +351,12 @@ a {
     width: auto;
     object-fit: contain;
 }
+
 .match-card__name {
+    font-size: 1rem;
     color: var(--color-text-main);
+    font-family: var(--font-heading);
+    font-weight: 700;
 }
 
 .match-card__info {
@@ -883,13 +887,6 @@ a {
 
     .match-card__team:last-child {
         flex-direction: column-reverse;
-    }
-
-    .match-card__name {
-        font-size: 1rem;
-        color: var(--color-text-main);
-        font-family: var(--font-heading);
-        font-weight: 700;
     }
 
     .league-table__name {
