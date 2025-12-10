@@ -1,6 +1,74 @@
-/* Importy */
-@import "reset.css";
-@import "variables.css";
+/* CSS Reset - inlined for performance (no @import blocking) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Klíčové pro responzivitu - padding nezvětšuje velikost elementu */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%; /* Obrázky nikdy nepřetečou svůj kontejner */
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit; /* Formulářové prvky dědí font */
+}
+
+* {
+    -webkit-tap-highlight-color: transparent; /* Odstranění modrého prokliku u odkazů */
+}
+
+/* Design System Variables - inlined for performance */
+:root {
+    /* --- Colors --- */
+    
+    /* Primary */
+    --color-primary: #283e67;
+    --color-primary-hover: #5373b5;
+    --color-primary-active: #1f2e5a;
+    
+    /* Accent */
+    --color-accent: #c33734;
+    --color-accent-hover: #e26966;
+    --color-accent-active: #a32b29;
+    
+    /* Neutrals */
+    --color-text-main: #1a202c;
+    --color-text-subtle: #718096;
+    --color-border: #e2e8f0;
+    --color-bg-container: #ffffff;
+    --color-bg-page: #f1f5f9;
+    --color-bg-light: #f8fafc;
+    --color-text-light: #e2e8f0;
+    --color-white: #ffffff;
+    
+    /* System */
+    --color-success: #48bb78;
+    --color-error: #f56565;
+    
+    /* --- TYPOGRAFIE --- */
+    --font-heading: "Poppins", sans-serif;
+    --font-body: "Inter", sans-serif;
+    
+    /* --- SPACING & LAYOUT --- */
+    --radius-card: 8px;
+    --shadow-card: 0 2px 8px rgba(26, 32, 44, 0.05);
+    
+    --container-width-desktop: 1200px; /* Maximální šířka obsahu */
+}
 
 /* Základní nastavení stránky */
 body {
@@ -85,7 +153,7 @@ a {
 
 .footer {
     background-color: var(--color-primary);
-    color: #e2e8f0;
+    color: var(--color-text-light);
     border-top: 4px solid var(--color-accent);
 }
 
@@ -115,7 +183,7 @@ a {
 }
 
 .footer__heading {
-    color: white;
+    color: var(--color-white);
     font-size: 1.125rem;
     margin-bottom: 0.5rem;
 }
@@ -128,12 +196,12 @@ a {
 }
 
 .footer__link {
-    color: #e2e8f0;
+    color: var(--color-text-light);
     transition: color 0.2s ease;
 }
 
 .footer__link:hover {
-    color: white;
+    color: var(--color-white);
     text-decoration: underline;
 }
 
@@ -168,13 +236,13 @@ a {
 }
 
 .hero__content h1 {
-    color: white;
+    color: var(--color-white);
     font-size: 3rem;
     text-align: center;
 }
 
 .hero__subtitle {
-    color: white;
+    color: var(--color-white);
     font-size: 1rem;
 }
 
@@ -183,7 +251,7 @@ a {
     padding: 0.75rem 1.5rem;
     background-color: var(--color-accent);
     border-radius: var(--radius-card);
-    color: white;
+    color: var(--color-white);
     font-weight: 600;
     transition: all 0.3s ease-out;
 }
@@ -286,7 +354,7 @@ a {
 
 .match-card__score {
     font-size: 1.5rem;
-    font-weight: 600px;
+    font-weight: 600;
     font-family: var(--font-heading);
 }
 
@@ -335,7 +403,7 @@ a {
     font-weight: 600;
     font-size: 1rem;
     color: var(--color-text-subtle);
-    background-color: #f8fafc;
+    background-color: var(--color-bg-light);
 }
 
 .league-table__th--pos,
@@ -443,7 +511,7 @@ a {
 
 /* Horní část s logem */
 .team-card__header {
-    background-color: #F8FAFC;
+    background-color: var(--color-bg-light);
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -495,7 +563,7 @@ a {
     padding: 1rem;
     text-align: center;
     border-top: 1px solid var(--color-border);
-    background-color: white;
+    background-color: var(--color-white);
 }
 
 .team-card__link {
@@ -561,11 +629,11 @@ a {
 
     .nav__link {
         font-size: 1.5rem;
-        color: white;
+        color: var(--color-white);
     }
 
     .nav__link--active {
-        border-block-color: white;
+        border-block-color: var(--color-white);
     }
 
     .nav__hamburger {
@@ -597,7 +665,7 @@ a {
 
     .nav__cross .nav__bar:nth-child(1),
     .nav__cross .nav__bar:nth-child(3) {
-        background-color: white;
+        background-color: var(--color-white);
     }
 
     .nav__bar {
