@@ -1,6 +1,8 @@
 # UFoL - Univerzitní fotbalová liga (Frontend)
 
-<!-- TODO: pridat screenshot Domovske stranky -->
+<img width="2845" height="1456" alt="image" src="https://github.com/user-attachments/assets/40f0e19c-ef63-44b1-a652-da9d1f3cd0f2" />
+
+---
 
 Toto je semestrální práce pro předmět World Wide Web na Univerzitě Pardubice. Cílem je vytvořit moderní, responzivní a vysoce kvalitní statický frontend pro Univerzitní fotbalovou ligu (UFoL), postavený od základu bez CSS frameworků pro důkladné pochopení základních webových technologií.
 
@@ -40,16 +42,6 @@ Celý design byl vytvořen ve Figmě před samotným kódováním. To zahrnovalo
 **[Odkaz na Figma design](https://www.figma.com/design/6lnjYxH4pTH7uHvWWV7ib6/UniFotbal.cz?node-id=0-1&t=97RGqYWowy28hOH2-1)**
 
 ---
-
-<!-- ## 📸 Screenshoty
-
-| Mobilní verze | Desktopová verze |
-| :---: | :---: |
-| ![Mobile Screenshot](link-to-your-screenshot-later) | ![Desktop Screenshot](link-to-your-screenshot-later) |
-
-<!-- TODO: Pridat screenshoty
-
----  -->
 
 ## 🧑‍💻 Autor
 
