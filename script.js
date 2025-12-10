@@ -1,7 +1,8 @@
-/**
- * Hamburger menu toggle functionality
- * Handles mobile navigation menu open/close interactions
- */
+
+/* =========================================
+    Hamburger menu toggle functionality
+    Handles mobile navigation menu open/close interactions
+   ========================================= */
 (function() {
     'use strict';
     
