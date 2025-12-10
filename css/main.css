@@ -2,7 +2,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Klíčové pro responzivitu - padding nezvětšuje velikost elementu */
     margin: 0;
     padding: 0;
 }
@@ -17,29 +17,35 @@ video,
 canvas,
 svg {
     display: block;
-    max-width: 100%;
+    max-width: 100%; /* Obrázky nikdy nepřetečou svůj kontejner */
 }
 
 input,
 button,
 textarea,
 select {
-    font: inherit;
+    font: inherit; /* Formulářové prvky dědí font */
 }
 
 * {
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent; /* Odstranění modrého prokliku u odkazů */
 }
 
 /* Design System Variables - inlined for performance */
 :root {
-    /* Colors */
+    /* --- Colors --- */
+    
+    /* Primary */
     --color-primary: #283e67;
     --color-primary-hover: #5373b5;
     --color-primary-active: #1f2e5a;
+    
+    /* Accent */
     --color-accent: #c33734;
     --color-accent-hover: #e26966;
     --color-accent-active: #a32b29;
+    
+    /* Neutrals */
     --color-text-main: #1a202c;
     --color-text-subtle: #718096;
     --color-border: #e2e8f0;
@@ -48,17 +54,20 @@ select {
     --color-bg-light: #f8fafc;
     --color-text-light: #e2e8f0;
     --color-white: #ffffff;
+    
+    /* System */
     --color-success: #48bb78;
     --color-error: #f56565;
     
-    /* Typography */
+    /* --- TYPOGRAFIE --- */
     --font-heading: "Poppins", sans-serif;
     --font-body: "Inter", sans-serif;
     
-    /* Layout */
+    /* --- SPACING & LAYOUT --- */
     --radius-card: 8px;
     --shadow-card: 0 2px 8px rgba(26, 32, 44, 0.05);
-    --container-width-desktop: 1200px;
+    
+    --container-width-desktop: 1200px; /* Maximální šířka obsahu */
 }
 
 /* Základní nastavení stránky */
