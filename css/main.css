@@ -1,4 +1,6 @@
-/* CSS Reset - inlined for performance (no @import blocking) */
+/* =========================================
+    CSS Reset - inlined for performance (no @import blocking)
+   ========================================= */
 *,
 *::before,
 *::after {
@@ -52,7 +54,7 @@ select {
     --color-bg-container: #ffffff;
     --color-bg-page: #f1f5f9;
     --color-bg-light: #f8fafc;
-    --color-text-light: #e2e8f0;
+    --color-text-light: #edf2f7;
     --color-white: #ffffff;
     
     /* System */
@@ -60,8 +62,8 @@ select {
     --color-error: #f56565;
     
     /* --- TYPOGRAFIE --- */
-    --font-heading: "Poppins", sans-serif;
-    --font-body: "Inter", sans-serif;
+    --font-heading: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-body: "Inter",  -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     
     /* --- SPACING & LAYOUT --- */
     --radius-card: 8px;
@@ -92,7 +94,9 @@ a {
     color: inherit;
 }
 
-/* HEADER */
+/* =========================================
+    HEADER
+   ========================================= */
 
 .header {
     padding: 0.5rem 1.5rem;
@@ -110,6 +114,8 @@ a {
     width: 6rem;
     height: auto;
 }
+
+/* NAVIGATION */
 
 .nav__hamburger {
     display: none;
@@ -150,7 +156,9 @@ a {
     color: var(--color-primary-active);
 }
 
-/* FOOTER */
+/* =========================================
+    FOOTER
+   ========================================= */
 
 .footer {
     background-color: var(--color-primary);
@@ -431,6 +439,7 @@ a {
 
 .league-table__name {
     font-weight: 600;
+    font-size: 1rem;
 }
 
 .league-table__row--zebra {
@@ -555,6 +564,7 @@ a {
     border: 1px solid var(--color-primary);
     color: var(--color-primary);
     padding: 0.4rem 1rem;
+    cursor: pointer;
 }
 
 .btn--outline:hover {
@@ -877,6 +887,13 @@ a {
 
     .match-card__name {
         font-size: 1rem;
+        color: var(--color-text-main);
+        font-family: var(--font-heading);
+        font-weight: 700;
+    }
+
+    .league-table__name {
+        font-size: 0.7rem;
     }
 
     .match-card__info {
@@ -903,7 +920,7 @@ a {
 
     /* Zmenseni filtr buttonu */
     .filter-btn {
-        padding: 0.2rem 0.4rem;
+        padding: 0.4rem 0.8rem;
         font-size: 0.7rem;
     }
 
