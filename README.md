@@ -46,4 +46,4 @@ Celý design byl vytvořen ve Figmě před samotným kódováním. To zahrnovalo
 ## 🧑‍💻 Autor
 
 * **Matouš Benedikt**
-* **GitHub:** [@MatBen19](https://github.com/MatBen19)
+* **GitHub:** [@matous-ben](https://github.com/matous-ben)
