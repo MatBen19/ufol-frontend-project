@@ -10,7 +10,7 @@ Toto je semestrální práce pro předmět World Wide Web na Univerzitě Pardubi
 
 ## 🚀 Live Demo
 
-**[Odkaz na živou demoverzi zde](https://matben19.github.io/ufol-frontend-project/index.html)**
+**[Odkaz na živou demoverzi zde](https://matous-ben.github.io/ufol-frontend-project/)**
 
 ---
 
